@@ -10,6 +10,8 @@ public class ProductEndpoint {
     @Autowired
     ProductService ps;
 
+
+
     @GetMapping("/alleproducten")
     public Iterable<Product> verkrijgAlleProducten(){
         System.out.println("in endpoint alle producten");
@@ -22,14 +24,14 @@ public class ProductEndpoint {
         return "product aangemaakt";
     }
 
-    @DeleteMapping("/productverwijderen/{productId}")
-    public String productVerwijderen(@PathVariable int productId){
-        System.out.println(">>"+productId);
-        return "gelukt";
+//    @DeleteMapping("/productverwijderen/{productId}")
+  //  public String productVerwijderen(@PathVariable long productId){
+    //    ps.verwijderProductMetId(productId);
+      //  return "gelukt";
+    //}
+    @GetMapping("/proberen")
+    public void uitproberen(){
+        ps.uitproberen();
     }
-    @DeleteMapping("/productverwijderentrial/{productId}")
-    public String productVerwijderenTrial(@PathVariable int productId){
-        System.out.println(">>"+productId);
-        return "gelukt";
-    }
+
 }

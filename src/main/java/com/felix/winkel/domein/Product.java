@@ -14,7 +14,15 @@ public class Product {
     private String naam;
     private int prijs;
     private String omschrijving;
+    private boolean bovenAchttien;
 
+    public boolean isBovenAchttien() {
+        return bovenAchttien;
+    }
+
+    public void setBovenAchttien(boolean bovenAchttien) {
+        this.bovenAchttien = bovenAchttien;
+    }
 
     public String getNaam(){
         return naam;
